@@ -11,7 +11,7 @@ A collection of components for contact information in Material Design build with
 [Travis-CI](https://travis-ci.org/Collaborne/paper-contact) [![Travis state](https://travis-ci.org/Collaborne/d3-progress-meter.svg?branch=master)](https://travis-ci.org/Collaborne/paper-contact)
 
 ##&lt;paper-contact-email&gt;
-=================
+
 Component for email contact details, that triggers the opening of the email client on tap.
 
 ```html
