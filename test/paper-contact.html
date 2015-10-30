@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<title>paper-contact</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+		<script src="../../web-component-tester/browser.js"></script>
+		<script src="../../test-fixture/test-fixture-mocha.js"></script>
+		
+		<link rel="import" href="../paper-contact-email.html">
+		<link rel="import" href="../../test-fixture/test-fixture.html">
+	</head>
+	<body>
+	
+		<test-fixture id="TrivialEmailElement">
+			<template>
+				<paper-contact-email></paper-contact-email>
+			</template>
+		</test-fixture>
+	
+		<script>
+			suite('<paper-contact-email>', function() {
+				suite('tap behavior', function() {
+					var element;
+	
+					setup(function() {
+						element = fixture('TrivialEmailElement');
+					});
+					
+					test('forwards to email on tap', function() {
+						expect(element._calcTarget('mail@example.com')).to.be.eql('mailto:mail@example.com');
+					});
+				});
+			});
+		</script>
+	
+	</body>
+</html>
