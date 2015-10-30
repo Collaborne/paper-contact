@@ -22,7 +22,7 @@ Component for email contact details, that triggers the opening of the email clie
 
 Property         | Type   | Description                                                              | Example
 ---------------- | ------ | ------------------------------------------------------------------------ | -------
-**email **       | String | Email address 															 | email@example.com
+**email**        | String | Email address 															 | email@example.com
 
 
 ## License
