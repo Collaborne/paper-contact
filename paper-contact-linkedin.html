@@ -4,6 +4,7 @@
 <link rel="import" href="../paper-item/paper-icon-item.html">
 <link rel="import" href="../paper-ripple/paper-ripple.html">
 <link rel="import" href="../paper-styles/paper-styles.html">
+<link rel="import" href="utils.html">
 
 
 <dom-module id="paper-contact-linkedin">
@@ -13,6 +14,7 @@
 		<style>
 			.item {
 				position: relative;
+				border-top: 1px solid #eee;
 			}
 	
 			.icon {
@@ -25,7 +27,7 @@
 			}
 		</style>
 
-		<paper-icon-item id='item' class='item' on-tap='_onTap'>
+		<paper-icon-item hidden='Utils.isNullOrUndefined(profile)' id='item' class='item' on-tap='_onTap'>
 			<paper-ripple fit></paper-ripple>
 			<iron-icon class='icon' icon='social:public' item-icon></iron-icon>
 			<div class='text'>LinkedIn</div>
@@ -45,6 +47,10 @@
 	
 		// Private methods
 		_onTap: function(e) {
+			if(!Utils.stringStartsWith(this.profile, "http://") && !Utils.stringStartsWith(this.profile, "https://")) {
+				// no http or https
+				this.profile = "https://" + this.profile;
+			}
 			window.open(this.profile, '_blank');
 		}
 	});

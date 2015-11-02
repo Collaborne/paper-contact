@@ -4,6 +4,7 @@
 <link rel="import" href="../paper-item/paper-icon-item.html">
 <link rel="import" href="../paper-ripple/paper-ripple.html">
 <link rel="import" href="../paper-styles/paper-styles.html">
+<link rel="import" href="utils.html">
 
 
 <dom-module id="paper-contact-phone">
@@ -13,6 +14,7 @@
 		<style>
 			.item {
 				position: relative;
+				border-top: 1px solid #eee;
 			}
 	
 			.icon {
@@ -25,7 +27,7 @@
 			}
 		</style>
 
-		<paper-icon-item id='item' class='item' on-tap='_onTap'>
+		<paper-icon-item hidden='Utils.isNullOrUndefined(phone)' id='item' class='item' on-tap='_onTap'>
 			<paper-ripple fit></paper-ripple>
 			<iron-icon class='icon' icon='communication:phone' item-icon></iron-icon>
 			<div class='text'>[[phone]]</div>
