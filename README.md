@@ -18,7 +18,7 @@ Component for address contact details, that triggers the opening of Google Maps 
 <paper-contact-address address="London" latitude=51.5287718 longitude=-0.2416798></paper-contact-address>
 ```
 
-## Properties
+### Properties
 
 Property         | Type   | Description                                                              | Example
 ---------------- | ------ | ------------------------------------------------------------------------ | -------
@@ -34,7 +34,7 @@ Component for email contact details, that triggers the opening of the email clie
 <paper-contact-email email="email@example.com"></paper-contact-email>
 ```
 
-## Properties
+### Properties
 
 Property         | Type   | Description                                                              | Example
 ---------------- | ------ | ------------------------------------------------------------------------ | -------
@@ -48,7 +48,7 @@ Component for LinkedIn contact details, that triggers the opening of the linkedI
 <paper-contact-linkedin profile="https://www.linkedin.com/in/profile"></paper-contact-linkedin>
 ```
 
-## Properties
+### Properties
 
 Property         | Type   | Description                                                              | Example
 ---------------- | ------ | ------------------------------------------------------------------------ | -------
@@ -62,7 +62,7 @@ Component for mobile contact details, that triggers the native call function for
 <paper-contact-mobile mobile="+31123456789"></paper-contact-mobile>
 ```
 
-## Properties
+### Properties
 
 Property         | Type   | Description                                                              | Example
 ---------------- | ------ | ------------------------------------------------------------------------ | -------
@@ -76,7 +76,7 @@ Component for generic phone contact details, that triggers the native call funct
 <paper-contact-phone phone="+31123456789"></paper-contact-phone>
 ```
 
-## Properties
+### Properties
 
 Property         | Type   | Description                                                              | Example
 ---------------- | ------ | ------------------------------------------------------------------------ | -------
@@ -90,7 +90,7 @@ Component for skype contact details, that triggers the skype call function for t
 <paper-contact-skype skype-id="your-id"></paper-contact-skype>
 ```
 
-## Properties
+### Properties
 
 Property         | Type   | Description                                                              | Example
 ---------------- | ------ | ------------------------------------------------------------------------ | -------
@@ -104,7 +104,7 @@ Component for twitter contact details, that opens the provided twitter profile i
 <paper-contact-twitter profile="@profile"></paper-contact-twitter>
 ```
 
-## Properties
+### Properties
 
 Property         | Type   | Description                                                              | Example
 ---------------- | ------ | ------------------------------------------------------------------------ | -------
