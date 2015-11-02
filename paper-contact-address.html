@@ -5,6 +5,7 @@
 <link rel="import" href="../paper-item/paper-item-body.html">
 <link rel="import" href="../paper-ripple/paper-ripple.html">
 <link rel="import" href="../paper-styles/paper-styles.html">
+<link rel="import" href="paper-contact-behavior.html">
 <link rel="import" href="paper-contact-shared-styles.html">
 
 <dom-module id="paper-contact-address">
@@ -13,10 +14,10 @@
 	
 		<style include="paper-contact-shared-styles"></style>
 
-		<paper-icon-item hidden=[[!address]] class='item' on-tap='_onTap'>
+		<paper-icon-item hidden=[[!address]] class='item' on-tap='openInBlankTab'>
 			<paper-ripple fit></paper-ripple>
 			<iron-icon class='icon' icon='maps:place' item-icon></iron-icon>
-			<paper-item-body class='text' three-line>[[address]]</paper-item-body>
+			<paper-item-body class='text' three-line><content></content></paper-item-body>
 		</paper-icon-item>
 	</template>
 </dom-module>
@@ -28,18 +29,18 @@
 	Polymer({
 		is: 'paper-contact-address',
 		properties: {
-			address: String,
 			latitude: Number,
 			longitude: Number
 		},
-	
+		
+	    behaviors: [
+   			Polymer.PaperContactBehavior,
+   	    ],
+
 		// Private methods
-		_onTap: function(e) {
-			window.open(this._calcTarget(this.address, this.latitude, this.longitude), '_blank');
-		},
-		_calcTarget: function(address, latitude, longitude) {
-			encodedAddress = encodeURIComponent(address);
-			return 'https://www.google.com/maps/search/' + encodedAddress + '/@' + latitude + '+' + longitude;
+		getTargetUrl: function(content) {
+			encodedAddress = encodeURIComponent(content);
+			return 'https://www.google.com/maps/search/' + encodedAddress + '/@' + this.latitude + '+' + this.longitude;
 		}
 	});
 

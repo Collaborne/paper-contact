@@ -1,0 +1,40 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<script>
+
+/**
+ * Contact elements can use this behavior to open a detail view on tap. The user needs to implement
+ * a method getTargetUrl() which returns the URL that is opened.
+ */
+Polymer.PaperContactBehavior = {
+	/**
+	 * Opens the target URL in the same tab
+	 */
+	openInSameTab: function(e) {
+		var value = this._getContent();
+		if (value) {
+			window.location.assign(this.getTargetUrl(value));
+		}
+	},
+	/**
+	 * Opens the target URL in a new tab
+	 */
+	openInBlankTab: function(e) {
+		var value = this._getContent();
+		if (value) {
+			window.open(this.getTargetUrl(value), '_blank');
+		}
+	},
+	
+	// Private methods
+	_getContent: function(e) {
+		var content = Polymer.dom(this.root).querySelector('content');
+		var items = Polymer.dom(content).getDistributedNodes();
+		if (items.length <= 0) {
+			return null;
+		}
+		return Polymer.dom(items[0]).textContent;
+	}
+};
+
+</script>
