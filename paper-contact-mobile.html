@@ -4,8 +4,6 @@
 <link rel="import" href="../paper-item/paper-icon-item.html">
 <link rel="import" href="../paper-ripple/paper-ripple.html">
 <link rel="import" href="../paper-styles/paper-styles.html">
-<link rel="import" href="utils.html">
-
 
 <dom-module id="paper-contact-mobile">
 
@@ -27,7 +25,7 @@
 			}
 		</style>
 
-		<paper-icon-item hidden='Utils.isNullOrUndefined(mobile)' id='item' class='item' on-tap='_onTap'>
+		<paper-icon-item hidden=[[!mobile]] id='item' class='item' on-tap='_onTap'>
 			<paper-ripple fit></paper-ripple>
 			<iron-icon class='icon' icon='hardware:smartphone' item-icon></iron-icon>
 			<div class='text'>[[mobile]]</div>

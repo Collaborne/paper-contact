@@ -1,13 +1,11 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-icon/iron-icon.html">
-<link rel="import" href="../iron-icons/communication-icons.html">
+<link rel="import" href="../iron-icons/maps-icons.html">
 <link rel="import" href="../paper-item/paper-icon-item.html">
 <link rel="import" href="../paper-ripple/paper-ripple.html">
 <link rel="import" href="../paper-styles/paper-styles.html">
-<link rel="import" href="utils.html">
 
-
-<dom-module id="paper-contact-email">
+<dom-module id="paper-contact-address">
 
 	<template>
 	
@@ -27,10 +25,10 @@
 			}
 		</style>
 
-		<paper-icon-item hidden='Utils.isNullOrUndefined(email)' id='item' class='item' on-tap='_onTap'>
+		<paper-icon-item hidden=[[!address]] id='item' class='item' on-tap='_onTap'>
 			<paper-ripple fit></paper-ripple>
-			<iron-icon class='icon' icon='communication:email' item-icon></iron-icon>
-			<div class='text'>[[email]]</div>
+			<iron-icon class='icon' icon='maps:place' item-icon></iron-icon>
+			<div class='text'>[[address]]</div>
 		</paper-icon-item>
 	</template>
 </dom-module>
@@ -40,17 +38,20 @@
 (function() {
 
 	Polymer({
-		is: 'paper-contact-email',
+		is: 'paper-contact-address',
 		properties: {
-			email: String
+			address: String,
+			latitude: Number,
+			longitude: Number
 		},
 	
 		// Private methods
 		_onTap: function(e) {
-			window.location.assign(this._calcTarget(this.email));
+			window.open(this._calcTarget(this.address, this.latitude, this.longitude), '_blank');
 		},
-		_calcTarget: function(email) {
-			return 'mailto:' + email;
+		_calcTarget: function(address, latitude, longitude) {
+			encodedAddress = encodeURIComponent(address);
+			return 'https://www.google.com/maps/search/' + encodedAddress + '/@' + latitude + '+' + longitude;
 		}
 	});
 

@@ -4,8 +4,6 @@
 <link rel="import" href="../paper-item/paper-icon-item.html">
 <link rel="import" href="../paper-ripple/paper-ripple.html">
 <link rel="import" href="../paper-styles/paper-styles.html">
-<link rel="import" href="utils.html">
-
 
 <dom-module id="paper-contact-linkedin">
 
@@ -27,7 +25,7 @@
 			}
 		</style>
 
-		<paper-icon-item hidden='Utils.isNullOrUndefined(profile)' id='item' class='item' on-tap='_onTap'>
+		<paper-icon-item hidden=[[!profile]] id='item' class='item' on-tap='_onTap'>
 			<paper-ripple fit></paper-ripple>
 			<iron-icon class='icon' icon='social:public' item-icon></iron-icon>
 			<div class='text'>LinkedIn</div>
@@ -52,6 +50,9 @@
 				this.profile = "https://" + this.profile;
 			}
 			window.open(this.profile, '_blank');
+		},
+		stringStartsWith: function(string, prefix) {
+			return string.slice(0, prefix.length) == prefix;
 		}
 	});
 
