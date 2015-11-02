@@ -2,6 +2,7 @@
 <link rel="import" href="../iron-icon/iron-icon.html">
 <link rel="import" href="../iron-icons/maps-icons.html">
 <link rel="import" href="../paper-item/paper-icon-item.html">
+<link rel="import" href="../paper-item/paper-item-body.html">
 <link rel="import" href="../paper-ripple/paper-ripple.html">
 <link rel="import" href="../paper-styles/paper-styles.html">
 <link rel="import" href="paper-contact-shared-styles.html">
@@ -15,7 +16,7 @@
 		<paper-icon-item hidden=[[!address]] class='item' on-tap='_onTap'>
 			<paper-ripple fit></paper-ripple>
 			<iron-icon class='icon' icon='maps:place' item-icon></iron-icon>
-			<div class='text'>[[address]]</div>
+			<paper-item-body class='text' three-line>[[address]]</paper-item-body>
 		</paper-icon-item>
 	</template>
 </dom-module>
