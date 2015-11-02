@@ -1,0 +1,54 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../iron-icons/social-icons.html">
+<link rel="import" href="../paper-item/paper-icon-item.html">
+<link rel="import" href="../paper-ripple/paper-ripple.html">
+<link rel="import" href="../paper-styles/paper-styles.html">
+
+
+<dom-module id="paper-contact-linkedin">
+
+	<template>
+	
+		<style>
+			.item {
+				position: relative;
+			}
+	
+			.icon {
+				opacity: var(--dark-secondary-opacity);
+			}
+			
+			.text {
+				white-space: pre-wrap;
+				@apply(--paper-font-body1);
+			}
+		</style>
+
+		<paper-icon-item id='item' class='item' on-tap='_onTap'>
+			<paper-ripple fit></paper-ripple>
+			<iron-icon class='icon' icon='social:public' item-icon></iron-icon>
+			<div class='text'>LinkedIn</div>
+		</paper-icon-item>
+	</template>
+</dom-module>
+
+<script>
+
+(function() {
+
+	Polymer({
+		is: 'paper-contact-linkedin',
+		properties: {
+			profile: String
+		},
+	
+		// Private methods
+		_onTap: function(e) {
+			window.open(this.profile, '_blank');
+		}
+	});
+
+})();
+
+</script>
