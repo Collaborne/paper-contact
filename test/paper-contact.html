@@ -60,7 +60,7 @@
 					});
 					
 					test('forwards to email on tap', function() {
-						expect(element._calcTarget('mail@example.com')).to.be.eql('mailto:mail@example.com');
+						expect(element.getTargetUrl('mail@example.com')).to.be.eql('mailto:mail%40example.com');
 					});
 				});
 			});
@@ -73,7 +73,7 @@
 					});
 					
 					test('forwards to phonecall on tap', function() {
-						expect(element._calcTarget('1234')).to.be.eql('tel:1234');
+						expect(element.getTargetUrl('1234')).to.be.eql('tel:1234');
 					});
 				});
 			});
@@ -86,7 +86,7 @@
 					});
 					
 					test('forwards to phonecall on tap', function() {
-						expect(element._calcTarget('1234')).to.be.eql('tel:1234');
+						expect(element.getTargetUrl('1234')).to.be.eql('tel:1234');
 					});
 				});
 			});
@@ -99,7 +99,7 @@
 					});
 					
 					test('forwards to skype call on tap', function() {
-						expect(element._calcTarget('skype-id')).to.be.eql('skype:skype-id?call');
+						expect(element.getTargetUrl('skype-id')).to.be.eql('skype:skype-id?call');
 					});
 				});
 			});
@@ -112,7 +112,7 @@
 					});
 					
 					test('forwards to twitter on tap', function() {
-						expect(element._calcTarget('@profile')).to.be.eql('https://twitter.com/#!/@profile');
+						expect(element.getTargetUrl('@profile')).to.be.eql('https://twitter.com/#!/@profile');
 					});
 				});
 			});
@@ -125,7 +125,9 @@
 					});
 					
 					test('forwards to google maps on tap', function() {
-						expect(element._calcTarget('London', 51.5287718, -0.2416798)).to.be.eql("https://www.google.com/maps/search/London/@51.5287718+-0.2416798");
+						element.latitude = 51.5287718;
+						element.longitude = -0.2416798;
+						expect(element.getTargetUrl('London')).to.be.eql("https://www.google.com/maps/search/London/@51.5287718+-0.2416798");
 					});
 				});
 			});
