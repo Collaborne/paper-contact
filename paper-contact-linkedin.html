@@ -32,14 +32,7 @@
 	
 		// Private methods
 		_onTap: function(e) {
-			if(!Utils.stringStartsWith(this.profile, "http://") && !Utils.stringStartsWith(this.profile, "https://")) {
-				// no http or https
-				this.profile = "https://" + this.profile;
-			}
 			window.open(this.profile, '_blank');
-		},
-		stringStartsWith: function(string, prefix) {
-			return string.slice(0, prefix.length) == prefix;
 		}
 	});
 
