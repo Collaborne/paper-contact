@@ -15,7 +15,7 @@ A collection of components for contact information in Material Design build with
 Component for address contact details, that triggers the opening of Google Maps to the specified address on tap.
 
 ```html
-<paper-contact-address latitude=51.5287718 longitude=-0.2416798>London</paper-contact-address>
+<paper-contact-address latitude="51.5287718" longitude="-0.2416798">London</paper-contact-address>
 ```
 
 ### Properties
