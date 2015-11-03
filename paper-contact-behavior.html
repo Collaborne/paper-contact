@@ -1,4 +1,4 @@
-<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
 
 <script>
 
@@ -28,8 +28,8 @@ Polymer.PaperContactBehavior = {
 	
 	// Private methods
 	_getContent: function(e) {
-		var content = Polymer.dom(this.root).querySelector('content');
-		var items = Polymer.dom(content).getDistributedNodes();
+		// Content is stored as the text content of the element, e.g. <paper-contact-email>XXX</paper-contact-email>
+		var items = Polymer.dom(this).getEffectiveChildNodes();
 		if (items.length <= 0) {
 			return null;
 		}
