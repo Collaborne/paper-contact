@@ -9,28 +9,28 @@
 		<script src="../../web-component-tester/browser.js"></script>
 		<script src="../../test-fixture/test-fixture-mocha.js"></script>
 		
-		<link rel="import" href="../paper-contact-phone.html">
+		<link rel="import" href="../paper-contact-mobile.html">
 		<link rel="import" href="../../test-fixture/test-fixture.html">
 	</head>
 	<body>
 	
-		<test-fixture id="TrivialPhoneElement">
+		<test-fixture id="TrivialMobileElement">
 			<template>
-				<paper-contact-phone></paper-contact-phone>
+				<paper-contact-mobile></paper-contact-mobile>
 			</template>
 		</test-fixture>
 	
 		<script>
-			suite('<paper-contact-phone>', function() {
+			suite('<paper-contact-mobile>', function() {
 				suite('tap behavior', function() {
 					var element;
 	
 					setup(function() {
-						element = fixture('TrivialPhoneElement');
+						element = fixture('TrivialMobileElement');
 					});
 					
 					test('forwards to phonecall on tap', function() {
-						expect(element).to.be.eql('tel:1234');
+						expect(element.getTargetUrl('1234')).to.be.eql('tel:1234');
 					});
 				});
 			});
