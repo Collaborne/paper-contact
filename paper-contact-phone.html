@@ -22,14 +22,12 @@
 </dom-module>
 
 <script>
-
 (function() {
-
 	Polymer({
 		is: 'paper-contact-phone',
 		
 	    behaviors: [
-   			Polymer.PaperContactBehavior,
+   			Polymer.PaperContactBehavior
    	    ],
 
 		// Private methods
@@ -37,7 +35,5 @@
 			return 'tel:' + content;
 		}
 	});
-
 })();
-
 </script>
