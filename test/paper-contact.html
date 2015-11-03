@@ -9,13 +9,14 @@
 		<script src="../../web-component-tester/browser.js"></script>
 		<script src="../../test-fixture/test-fixture-mocha.js"></script>
 		
+		<link rel="import" href="../paper-contact-email.html">
 		<link rel="import" href="../../test-fixture/test-fixture.html">
 	</head>
 	<body>
 	
 		<test-fixture id="TrivialEmailElement">
 			<template>
-				<div></div>
+				<paper-contact-email></paper-contact-email>
 			</template>
 		</test-fixture>
 	
@@ -23,7 +24,15 @@
 			suite('<paper-contact-email>', function() {
 				suite('tap behavior', function() {
 					test('forwards to email on tap', function() {
-						expect(true).to.be.eql(true);
+						var element;
+						
+						setup(function() {
+							element = fixture('TrivialEmailElement');
+						});
+						
+						test('forwards to email on tap', function() {
+							expect(element.getTargetUrl('mail@example.com')).to.be.eql('mailto:mail%40example.com');
+						});
 					});
 				});
 			});
