@@ -2,7 +2,7 @@
 
 A collection of components for contact information in Material Design build with [Polymer 1.x](https://www.polymer-project.org)
 
-![Screenshot](/doc/paper-contact.png "Screenshot")
+![Screenshot](/docs/paper-contact.png "Screenshot")
 
 ## Usage
 
