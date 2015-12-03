@@ -38,8 +38,12 @@
 
 		// Private methods
 		getTargetUrl: function(content) {
-			encodedAddress = encodeURIComponent(content);
-			return 'https://www.google.com/maps/search/' + encodedAddress + '/@' + this.latitude + '+' + this.longitude;
+			var url = 'https://www.google.com/maps/search/' + encodeURIComponent(content);
+			// Only add coordinates if they are known
+			if (this.latitude && this.longitude) {
+				url += '/@' + this.latitude + '+' + this.longitude;
+			}
+			return  url;
 		}
 	});
 
