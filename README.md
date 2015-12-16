@@ -1,4 +1,4 @@
-# paper-contact  [![Bower version](https://badge.fury.io/bo/paper-contact.svg)](http://badge.fury.io/bo/paper-contact)
+# paper-contact  [![Bower version](https://badge.fury.io/bo/paper-contact.svg)](http://badge.fury.io/bo/paper-contact) [![Travis state](https://travis-ci.org/Collaborne/paper-contact.svg?branch=master)](https://travis-ci.org/Collaborne/paper-contact)
 
 A collection of components for contact information in Material Design build with [Polymer 1.x](https://www.polymer-project.org)
 
