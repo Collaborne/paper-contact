@@ -6,7 +6,7 @@ paper-contact [![Bower version](https://badge.fury.io/bo/paper-contact.svg)](htt
 
 A collection of components for contact information in Material Design build with [Polymer 1.x](https://www.polymer-project.org)
 
-![Screenshot](/docs/paper-contact.png "Screenshot")
+![Screenshot](/doc/paper-contact.png "Screenshot")
 
 To use the elements:
 

@@ -28,7 +28,7 @@ Component for address contact details, that triggers the opening of Google Maps 
 		<paper-icon-item class='item' on-tap='openInBlankTab'>
 			<paper-ripple fit></paper-ripple>
 			<iron-icon class='icon' icon='maps:place' item-icon></iron-icon>
-			<paper-item-body class='text' three-line><content></content></paper-item-body>
+			<paper-item-body three-line><div class='text'><content></content></div></paper-item-body>
 		</paper-icon-item>
 	</template>
 	
@@ -58,8 +58,12 @@ Component for address contact details, that triggers the opening of Google Maps 
 
 		// Private methods
 		_getTargetUrl: function(content) {
-			encodedAddress = encodeURIComponent(content);
-			return 'https://www.google.com/maps/search/' + encodedAddress + '/@' + this.latitude + '+' + this.longitude;
+			var url = 'https://www.google.com/maps/search/' + encodeURIComponent(content);
+			// Only add coordinates if they are known
+			if (this.latitude && this.longitude) {
+				url += '/@' + this.latitude + '+' + this.longitude;
+			}
+			return  url;
 		}
 	});
 

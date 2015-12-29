@@ -129,6 +129,9 @@
 						element.longitude = -0.2416798;
 						expect(element.getTargetUrl('London')).to.be.eql("https://www.google.com/maps/search/London/@51.5287718+-0.2416798");
 					});
+					test('ignores coordinates if they are not set', function() {
+						expect(element.getTargetUrl('London')).to.be.eql("https://www.google.com/maps/search/London");
+					});
 				});
 			});
 		</script>
