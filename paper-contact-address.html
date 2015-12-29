@@ -57,7 +57,7 @@ Component for address contact details, that triggers the opening of Google Maps 
    	    ],
 
 		// Private methods
-		getTargetUrl: function(content) {
+		_getTargetUrl: function(content) {
 			encodedAddress = encodeURIComponent(content);
 			return 'https://www.google.com/maps/search/' + encodedAddress + '/@' + this.latitude + '+' + this.longitude;
 		}
