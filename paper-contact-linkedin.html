@@ -6,10 +6,20 @@
 <link rel="import" href="paper-contact-behavior.html">
 <link rel="import" href="paper-contact-shared-styles.html">
 
+<!--
+Component for LinkedIn contact details, that triggers the opening of the linkedIn profile on tap.
+
+### Example
+
+```html
+<paper-contact-linkedin>https://www.linkedin.com/in/profile</paper-contact-linkedin>
+```
+
+@demo demo/index.html
+-->
 <dom-module id="paper-contact-linkedin">
 
 	<template>
-	
 		<style include="paper-contact-shared-styles"></style>
 
 		<paper-icon-item class='item' on-tap='openInBlankTab'>
@@ -18,6 +28,7 @@
 			<div class='text'>LinkedIn</div>
 		</paper-icon-item>
 	</template>
+	
 </dom-module>
 
 <script>

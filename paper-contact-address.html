@@ -7,10 +7,22 @@
 <link rel="import" href="paper-contact-behavior.html">
 <link rel="import" href="paper-contact-shared-styles.html">
 
+<!--
+Component for address contact details, that triggers the opening of Google Maps to the specified address on tap.
+
+### Example
+
+```html
+<paper-contact-address latitude="51.5287718" longitude="-0.2416798">
+	London
+</paper-contact-address>
+```
+
+@demo demo/index.html
+-->
 <dom-module id="paper-contact-address">
 
 	<template>
-	
 		<style include="paper-contact-shared-styles"></style>
 
 		<paper-icon-item class='item' on-tap='openInBlankTab'>
@@ -19,6 +31,7 @@
 			<paper-item-body class='text' three-line><content></content></paper-item-body>
 		</paper-icon-item>
 	</template>
+	
 </dom-module>
 
 <script>
@@ -28,7 +41,14 @@
 	Polymer({
 		is: 'paper-contact-address',
 		properties: {
+			/**
+			 * Latitude of the desired location, e.g. 51.5287718
+			 */
 			latitude: Number,
+			
+			/**
+			 * Longitude of the desired location, e.g. -0.2416798
+			 */
 			longitude: Number
 		},
 		
