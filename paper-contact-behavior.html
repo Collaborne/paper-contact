@@ -5,6 +5,8 @@
 /**
  * Contact elements can use this behavior to open a detail view on tap. The user needs to implement
  * a method _getTargetUrl() which returns the URL that is opened.
+ *
+ * @polymerBehavior Polymer.PaperContactBehavior
  */
 Polymer.PaperContactBehavior = {
 	/**
@@ -16,6 +18,7 @@ Polymer.PaperContactBehavior = {
 			window.location.assign(this._getTargetUrl(value));
 		}
 	},
+	
 	/**
 	 * Opens the target URL in a new tab
 	 */
