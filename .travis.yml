@@ -1,4 +1,4 @@
-# Version 1.0.1 (FIX INPUT OF POLYLINT AS IT FAILS WITH INDEX.HTML)
+# Version 1.0.1
 language: node_js
 sudo: false
 node_js:
@@ -11,7 +11,7 @@ before_script:
   - npm install bower
   - bower install
   - npm install polylint
-  - polylint -i paper-contact.html
+  - polylint
   - export PATH=$PWD/node_modules/.bin:$PATH
 
 script:
