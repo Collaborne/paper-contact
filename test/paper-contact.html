@@ -4,11 +4,11 @@
 		<title>paper-contact</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
+
 		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
 		<script src="../../web-component-tester/browser.js"></script>
 		<script src="../../test-fixture/test-fixture-mocha.js"></script>
-		
+
 		<link rel="import" href="../paper-contact-email.html">
 		<link rel="import" href="../paper-contact-phone.html">
 		<link rel="import" href="../paper-contact-mobile.html">
@@ -18,7 +18,7 @@
 		<link rel="import" href="../../test-fixture/test-fixture.html">
 	</head>
 	<body>
-	
+
 		<test-fixture id="TrivialEmailElement">
 			<template>
 				<paper-contact-email></paper-contact-email>
@@ -49,16 +49,16 @@
 				<paper-contact-address></paper-contact-address>
 			</template>
 		</test-fixture>
-	
+
 		<script>
 			suite('<paper-contact-email>', function() {
 				suite('tap behavior', function() {
 					var element;
-	
+
 					setup(function() {
 						element = fixture('TrivialEmailElement');
 					});
-					
+
 					test('forwards to email on tap', function() {
 						expect(element._getTargetUrl('mail@example.com')).to.be.eql('mailto:mail%40example.com');
 					});
@@ -67,11 +67,11 @@
 			suite('<paper-contact-phone>', function() {
 				suite('tap behavior', function() {
 					var element;
-	
+
 					setup(function() {
 						element = fixture('TrivialPhoneElement');
 					});
-					
+
 					test('forwards to phonecall on tap', function() {
 						expect(element._getTargetUrl('1234')).to.be.eql('tel:1234');
 					});
@@ -80,11 +80,11 @@
 			suite('<paper-contact-mobile>', function() {
 				suite('tap behavior', function() {
 					var element;
-	
+
 					setup(function() {
 						element = fixture('TrivialMobileElement');
 					});
-					
+
 					test('forwards to phonecall on tap', function() {
 						expect(element._getTargetUrl('1234')).to.be.eql('tel:1234');
 					});
@@ -93,11 +93,11 @@
 			suite('<paper-contact-skype>', function() {
 				suite('tap behavior', function() {
 					var element;
-	
+
 					setup(function() {
 						element = fixture('TrivialSkypeElement');
 					});
-					
+
 					test('forwards to skype call on tap', function() {
 						expect(element._getTargetUrl('skype-id')).to.be.eql('skype:skype-id?call');
 					});
@@ -106,11 +106,11 @@
 			suite('<paper-contact-twitter>', function() {
 				suite('tap behavior', function() {
 					var element;
-	
+
 					setup(function() {
 						element = fixture('TrivialTwitterElement');
 					});
-					
+
 					test('forwards to twitter on tap', function() {
 						expect(element._getTargetUrl('@profile')).to.be.eql('https://twitter.com/#!/@profile');
 					});
@@ -119,11 +119,11 @@
 			suite('<paper-contact-address>', function() {
 				suite('tap behavior', function() {
 					var element;
-	
+
 					setup(function() {
 						element = fixture('TrivialAddressElement');
 					});
-					
+
 					test('forwards to google maps on tap', function() {
 						element.latitude = 51.5287718;
 						element.longitude = -0.2416798;
@@ -135,6 +135,6 @@
 				});
 			});
 		</script>
-	
+
 	</body>
 </html>

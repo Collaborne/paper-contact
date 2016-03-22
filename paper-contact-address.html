@@ -1,3 +1,4 @@
+<!doctype html>
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-icon/iron-icon.html">
 <link rel="import" href="../iron-icons/maps-icons.html">
@@ -31,7 +32,7 @@ Component for address contact details, that triggers the opening of Google Maps 
 			<paper-item-body three-line><div class="text"><content></content></div></paper-item-body>
 		</paper-icon-item>
 	</template>
-	
+
 </dom-module>
 
 <script>
@@ -45,13 +46,13 @@ Component for address contact details, that triggers the opening of Google Maps 
 			 * Latitude of the desired location, e.g. 51.5287718
 			 */
 			latitude: Number,
-			
+
 			/**
 			 * Longitude of the desired location, e.g. -0.2416798
 			 */
 			longitude: Number
 		},
-		
+
 		behaviors: [
 			Polymer.PaperContactBehavior
 		],

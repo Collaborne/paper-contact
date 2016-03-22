@@ -1,3 +1,4 @@
+<!doctype html>
 <link rel="import" href="../polymer/polymer.html">
 
 <script>
@@ -18,7 +19,7 @@ Polymer.PaperContactBehavior = {
 			window.location.assign(this._getTargetUrl(value));
 		}
 	},
-	
+
 	/**
 	 * Opens the target URL in a new tab
 	 */
@@ -28,7 +29,7 @@ Polymer.PaperContactBehavior = {
 			window.open(this._getTargetUrl(value), '_blank');
 		}
 	},
-	
+
 	// Private methods
 	_getContent: function(e) {
 		// Content is stored as the text content of the element, e.g. <paper-contact-email>XXX</paper-contact-email>
