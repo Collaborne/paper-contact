@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-contact/paper-contact.html">
+
+<dom-module id="paper-contact-list">
+
+  <template>
+
+    <style>
+      ::content .text {
+        padding-top :14px;
+        padding-bottom:14px;
+        width :100%;
+        border-bottom :1px solid rgba(0,0,0,0.12);
+      }
+      :last-child ::content .text {
+        border-bottom :none;
+      }
+    </style>
+
+    <content></content>
+  </template>
+
+</dom-module>
+
+
+<script>
+
+  (function() {
+
+    Polymer({
+      is: 'paper-contact-list'
+    });
+
+  })();
+
+</script>
