@@ -8,13 +8,21 @@
 
     <style>
       :host {
-        display: block;
+        display : block;
       }
-      ::content .text {
+      ::content > * > * .text {
         padding-top :14px;
         padding-bottom:14px;
         width :100%;
+      }
+      ::content > *:last-of-type > * .text {
         border-bottom :1px solid rgba(0,0,0,0.12);
+      }
+      ::content > *:last-of-type > * .icon {
+        visibility: hidden;
+      }
+      ::content > *:only-of-type > * .icon {
+        visibility: visible;
       }
       ::content > *:last-child > * .text {
         border-bottom :none;
