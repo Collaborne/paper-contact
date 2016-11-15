@@ -1,0 +1,50 @@
+<!doctype html>
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+<link rel="import" href="../paper-item/paper-icon-item.html">
+<link rel="import" href="../paper-ripple/paper-ripple.html">
+<link rel="import" href="paper-contact-behavior.html">
+<link rel="import" href="paper-contact-shared-styles.html">
+
+<!--
+Component for generic phone contact details, that triggers the native call function for the provided number on tap. Shows a different icon that the more specific "mobile" component.
+
+### Example
+
+```html
+<paper-contact-fax>+1-873-217-3442</paper-contact-fax>
+```
+
+@demo demo/index.html
+-->
+<dom-module id="paper-contact-fax">
+
+	<template>
+		<style include="paper-contact-shared-styles"></style>
+
+		<paper-icon-item class="item" on-tap="openInSameTab">
+			<paper-ripple fit></paper-ripple>
+			<iron-icon class="icon" icon="icons:print" item-icon></iron-icon>
+			<div class="text"><content></content></div>
+		</paper-icon-item>
+	</template>
+
+</dom-module>
+
+<script>
+(function() {
+	Polymer({
+		is: 'paper-contact-fax',
+
+		behaviors: [
+			Polymer.PaperContactBehavior
+		],
+
+		// Private methods
+		_getTargetUrl: function(content) {
+			return 'fax:' + content;
+		}
+	});
+})();
+</script>
