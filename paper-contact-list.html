@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="paper-contact.html">
+
+<!--
+Component for encapsulating and styling lists of contact details.
+
+### Example
+
+```html
+<paper-contact-list>
+  <paper-contact-email>email@example.com</paper-contact-email>
+  <paper-contact-email>email@example.com</paper-contact-email>
+  <paper-contact-address latitude="51.5287718" longitude="-0.2416798">London</paper-contact-address>
+</paper-contact-list>
+```
+
+@demo demo/index.html
+-->
+
+<dom-module id="paper-contact-list">
+
+  <template>
+
+    <style>
+      :host {
+        display : block;
+      }
+      ::content > * > * .text {
+        padding-top :14px;
+        padding-bottom:14px;
+        width :100%;
+      }
+      ::content > *:last-of-type > * .text {
+        border-bottom :1px solid rgba(0,0,0,0.12);
+      }
+      ::content > *:last-of-type > * .icon {
+        visibility: hidden;
+      }
+      ::content > *:only-of-type > * .icon {
+        visibility: visible;
+      }
+      ::content > *:last-child > * .text {
+        border-bottom :none;
+      }
+    </style>
+
+    <content></content>
+  </template>
+
+</dom-module>
+
+
+<script>
+
+  (function() {
+
+    Polymer({
+      is: 'paper-contact-list'
+    });
+
+  })();
+
+</script>
