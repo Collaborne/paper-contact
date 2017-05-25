@@ -29,7 +29,7 @@ Component for address contact details, that triggers the opening of Google Maps 
 		<paper-icon-item class="item" on-tap="openInBlankTab">
 			<paper-ripple fit></paper-ripple>
 			<iron-icon class="icon" icon="maps:place" item-icon></iron-icon>
-			<div class="text"><content></content></div>
+			<div class="text"><slot></slot></div>
 		</paper-icon-item>
 	</template>
 
