@@ -14,9 +14,9 @@ Polymer.PaperContactBehavior = {
 	 * Opens the target URL in the same tab
 	 */
 	openInSameTab: function(e) {
-		var value = this._getContent();
+		const value = this._getContent();
 		if (value) {
-			window.location.assign(this._getTargetUrl(value));
+			window.location.assign(encodeURI(this._getTargetUrl(value)));
 		}
 	},
 
@@ -24,16 +24,16 @@ Polymer.PaperContactBehavior = {
 	 * Opens the target URL in a new tab
 	 */
 	openInBlankTab: function(e) {
-		var value = this._getContent();
+		const value = this._getContent();
 		if (value) {
-			window.open(this._getTargetUrl(value), '_blank');
+			window.open(encodeURI(this._getTargetUrl(value), '_blank'));
 		}
 	},
 
 	// Private methods
 	_getContent: function(e) {
 		// Content is stored as the text content of the element, e.g. <paper-contact-email>XXX</paper-contact-email>
-		var items = Polymer.dom(this).getEffectiveChildNodes();
+		const items = Polymer.dom(this).getEffectiveChildNodes();
 		if (items.length <= 0) {
 			return null;
 		}

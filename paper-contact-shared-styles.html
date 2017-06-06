@@ -5,11 +5,10 @@
 	<template>
 		<style>
 			:host {
-				@apply(--layout-vertical);
+				@apply --layout-vertical;
 			}
 
 			.item {
-				position: relative;
 				cursor: pointer;
 			}
 
@@ -18,8 +17,10 @@
 			}
 
 			.text {
+				padding-top: 14px;
+				padding-bottom: 14px;
 				white-space: pre-wrap;
-				@apply(--paper-font-body1);
+				@apply --paper-font-body1;
 			}
 		</style>
 	</template>

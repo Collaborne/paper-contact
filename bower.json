@@ -3,7 +3,7 @@
   "authors": [
     "collaborne"
   ],
-  "description": "A collection of web components for contact information in Material Design (Polymer 1.x)",
+  "description": "A collection of web components for contact information in Material Design (Polymer)",
   "main": "paper-contact.html",
   "keywords": [
     "web-components",
@@ -19,16 +19,15 @@
     "**/.*"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.2.0",
-    "iron-icons": "PolymerElements/iron-icons#^1.0.0",
-    "iron-icon": "PolymerElements/iron-icon#^1.0.0",
-    "paper-item": "PolymerElements/paper-item#^1.0.0",
-    "paper-ripple": "PolymerElements/paper-ripple#^1.0.0",
-    "paper-styles": "PolymerElements/paper-styles#^1.0.0"
+    "polymer": "Polymer/polymer#^2.0.0",
+    "iron-icons": "PolymerElements/iron-icons#^2.0.0",
+    "iron-icon": "PolymerElements/iron-icon#^2.0.0",
+    "paper-item": "PolymerElements/paper-item#^2.0.0",
+    "paper-ripple": "PolymerElements/paper-ripple#^2.0.0",
+    "paper-styles": "PolymerElements/paper-styles#^2.0.0"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "web-component-tester": "*",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+    "iron-component-page": "PolymerElements/iron-component-page#^2.0.0",
+    "web-component-tester": "*"
   }
 }
