@@ -64,13 +64,21 @@ Component for email contact details, that triggers the opening of the email clie
 		_getTargetUrl: function(content) {
 			let returnString = 'mailto:' + encodeURIComponent(content);
 			
-			if (this.emailSubject || this.emailBody) returnString = returnString.concat('?');
+			if (this.emailSubject || this.emailBody) {
+				returnString = returnString.concat('?');
+			}
 			
-			if (this.emailSubject) returnString = returnString.concat(`subject=${this.emailSubject}`);
+			if (this.emailSubject) {
+				returnString = returnString.concat(`subject=${this.emailSubject}`);
+			}
 			
-			if (this.emailSubject && this.emailBody) returnString = returnString.concat('&');
+			if (this.emailSubject && this.emailBody) {
+				returnString = returnString.concat('&');
+			}
 			
-			if (this.emailBody) returnString = returnString.concat(`body=${this.emailBody}`);
+			if (this.emailBody) {
+				returnString = returnString.concat(`body=${this.emailBody}`);
+			}
 			
 			return returnString;
 		}
