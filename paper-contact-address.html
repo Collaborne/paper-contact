@@ -59,12 +59,12 @@ Component for address contact details, that triggers the opening of Google Maps 
 
 		// Private methods
 		_getTargetUrl: function(content) {
-			var url = 'https://www.google.com/maps/search/' + encodeURIComponent(content);
+			let url = `https://www.google.com/maps/search/${content}`;
 			// Only add coordinates if they are known
 			if (this.latitude && this.longitude) {
-				url += '/@' + this.latitude + '+' + this.longitude;
+				url += `/@${this.latitude}+${this.longitude}`;
 			}
-			return  url;
+			return url;
 		}
 	});
 
