@@ -52,6 +52,10 @@ Component for email contact details, that triggers the opening of the email clie
                 value: false
             },
 
+            url: {
+                type: String,
+            },
+
             target: {
                 type: String,
             }
@@ -70,7 +74,7 @@ Component for email contact details, that triggers the opening of the email clie
         },
 
 		_getTargetUrl: function(content) {
-			return 'mailto:' + encodeURIComponent(content);
+			return this.url || encodeURIComponent(content);
 		}
 	});
 })();
