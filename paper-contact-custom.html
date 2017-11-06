@@ -41,37 +41,37 @@ Component for email contact details, that triggers the opening of the email clie
 			Polymer.PaperContactBehavior
 		],
 
-        properties: {
-            icon: {
-                type: String,
-                value: 'icons:info'
-            },
+		properties: {
+			icon: {
+				type: String,
+				value: 'icons:info'
+			},
 
-            noLink: {
-                type: Boolean,
-                value: false
-            },
+			noLink: {
+				type: Boolean,
+				value: false
+			},
 
-            url: {
-                type: String,
-            },
+			url: {
+				type: String,
+			},
 
-            target: {
-                type: String,
-            }
-        },
+			target: {
+				type: String,
+			}
+		},
 
 		// Private methods
-        _open: function() {
-            if (this.noLink) {
-                return;
-            }
-            if (this.target === '_blank') {
-                this.openInBlankTab();
-                return;
-            }
-            this.openInSameTab()
-        },
+		_open: function() {
+			if (this.noLink) {
+				return;
+			}
+			if (this.target === '_blank') {
+				this.openInBlankTab();
+				return;
+			}
+			this.openInSameTab()
+		},
 
 		_getTargetUrl: function(content) {
 			return this.url || encodeURIComponent(content);
