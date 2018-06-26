@@ -1,4 +1,7 @@
 paper-contact [![Bower version](https://badge.fury.io/bo/paper-contact.svg)](http://badge.fury.io/bo/paper-contact) [![Travis state](https://travis-ci.org/Collaborne/paper-contact.svg?branch=master)](https://travis-ci.org/Collaborne/paper-contact) [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/Collaborne/paper-contact)
+  
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/Collabornepaper-contact)
+[![Stars on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/Collabornepaper-contact.svg)](https://vaadin.com/directory/component/Collabornepaper-contact)
 =========
 
 A collection of components for contact information in Material Design build with [Polymer](https://www.polymer-project.org)
