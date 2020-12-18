@@ -40,10 +40,47 @@ Component for email contact details, that triggers the opening of the email clie
 		behaviors: [
 			Polymer.PaperContactBehavior
 		],
+		
+		properties: {
+			/**
+			 * Set this to add a default subject line.
+			 */
+			emailSubject: {
+				type: String,
+				reflectToAttribute: true,
+				notify: true
+			},
+			/**
+			 * Set this to add default body content.
+			 */
+			emailBody: {
+				type: String,
+				reflectToAttribute: true,
+				notify: true
+			}
+		},
 
 		// Private methods
 		_getTargetUrl: function(content) {
-			return 'mailto:' + encodeURIComponent(content);
+			let returnString = 'mailto:' + encodeURIComponent(content);
+			
+			if (this.emailSubject || this.emailBody) {
+				returnString = returnString.concat('?');
+			}
+			
+			if (this.emailSubject) {
+				returnString = returnString.concat(`subject=${this.emailSubject}`);
+			}
+			
+			if (this.emailSubject && this.emailBody) {
+				returnString = returnString.concat('&');
+			}
+			
+			if (this.emailBody) {
+				returnString = returnString.concat(`body=${this.emailBody}`);
+			}
+			
+			return returnString;
 		}
 	});
 })();
