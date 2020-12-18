@@ -23,6 +23,7 @@ To use the elements:
     <link rel="import" href="paper-contact-twitter.html">
     <link rel="import" href="paper-contact-skype.html">
     <link rel="import" href="paper-contact-address.html">
+    <link rel="import" href="paper-contact-custom.html">
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
@@ -39,6 +40,7 @@ To use the elements:
     <paper-contact-twitter>@twitter-id</paper-contact-twitter>
     <paper-contact-skype>skype-id</paper-contact-skype>
     <paper-contact-address latitude="51.5287718" longitude="-0.2416798">23 Belgrave Square&#10;London SW1X 8PZ&#10;United Kingdom</paper-contact-address>
+    <paper-contact-custom icon="icons:favorite" no-link>Love it!</paper-contact-custom>
 </paper-contact-list>
 ```
 
